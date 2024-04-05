@@ -1,0 +1,95 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    background-color: orange;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: white;
+}
+.nav-bar{
+    font-size: 1rem;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    gap: 1rem;
+}
+header ul a:link,
+header ul a:visited {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+header ul a:hover,
+header ul a:focus {
+        /* padding: 0.5rem; */
+        background-color: rgb(4, 152, 32);
+        color: orange;
+}
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.grid-container{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". . . 1 ."
+                         ". img1 img2 img3 ."
+                         ". . m1 m1 .";
+    gap: 30px;
+}
+.grid-item1{
+    grid-area: img1;
+}
+.grid-item2{
+    grid-area: img2;
+}
+.grid-item3{
+    grid-area: img3;
+}
+.meowing {
+    grid-area: m1;
+    font-family: cursive;
+    font-size: 2rem;
+    color: rgb(4, 152, 32);
+}
+
+.shadow:hover {
+    box-shadow: 2px 2px 20px rgb(4, 152, 32);
+}
+
+footer{
+    background-color: orange;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Assignment 4</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <div class="nav-bar">
+                <ul class="nav-list">
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section>
+
+                <div class="grid-container">
+                    <div class="grid-item1 shadow" onmouseover="sayMeow(event)" onmouseout="quite(event)">
+                        <img src="cat1.jpg" alt="The first cat" width="200">
+                    </div>
+                    <div class="grid-item2 shadow" onmouseover="sayMeow(event)" onmouseout="quite(event)">
+                        <img src="cat2.jpeg" alt="The second cat" width="200">
+                    </div>
+                    <div class="grid-item3 shadow" onmouseover="sayMeow(event)" onmouseout="quite(event)">
+                        <img src="cat3.jpeg" alt="The third cat" width="200" >
+                    </div>
+                    <div class="meowing" id="meow">
+                        <p></p>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+        <footer>
+            <p>&copy; OD-CSC193A</p>
+        </footer>
+        
+        <script>
+            let sound = new Audio ('meowing.mp3');
+            let subscript = document.getElementById("meow");
+            function sayMeow (e){
+                sound.play();
+                subscript.innerHTML = "meowing.....";
+            }
+            function quite(e){
+                sound.pause();
+                subscript.innerHTML = "";
+            }
+            
+        </script>
+    </body>
+</html>
